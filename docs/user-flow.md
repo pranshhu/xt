@@ -1,12 +1,12 @@
 # User Flow Documentation
 
-## Flow Diagram
+## Unified User Flow Diagram
 ```mermaid
 graph TD
-    A[User Visits Application] --> B{Is User Logged In?}
+    A[User Visits App] --> B{Logged In?}
     B -- Yes --> C[Dashboard]
     B -- No --> D[Login Page]
-    D --> E{Login Successful?}
+    D --> E{Login Success?}
     E -- Yes --> C
     E -- No --> D
 
@@ -18,36 +18,63 @@ graph TD
     F --> K[Team Page]
     F --> L[Settings Page]
 
-    G --> M[Display Overview]
-    M --> N[Show Active Robots Count]
-    M --> O[Show Average Battery Status]
-    M --> P[Show Critical Alerts]
+    G --> M[Fetch Robot Status]
+    M --> N[Display Active, Idle, Offline Robots]
+    G --> O[Fetch Robot Locations]
+    O --> P[Display Map]
+    G --> Q[Fetch KPIs]
+    Q --> R[Display Battery, CPU, RAM]
 
-    H --> Q[Display List of Robots]
-    Q --> R[Show Robot Details: Name, Status, Location, Battery Level, CPU Usage, RAM Usage, Video Feed]
+    H --> S[Fetch Robot List]
+    S --> T[Display Robot Details]
+    T --> U[User Selects Robot]
+    U --> V[Show Live Video Feed]
+    U --> W[Assign Task to Robot]
+    W --> X[Send Command to Robot]
+    U --> Y[Plan Missions]
+    Y --> Z[Assign Tasks to Robots]
+    Z --> AA[Monitor Mission Progress]
+    AA --> AB{Complete?}
+    AB -- Yes --> AC[Mark as Complete]
+    AB -- No --> AA
+    U --> AD[Remote Control Robot]
+    AD --> AE[Send Movement Commands]
+    AE --> AF[Receive Feedback]
+    U --> AG[Optimize Robot Paths]
+    AG --> AH[Calculate Optimal Routes]
+    AH --> AI[Send Routes to Robots]
+    AI --> AJ[Monitor Route Execution]
+    U --> AK[Set Virtual Boundaries]
+    AK --> AL[Monitor Robot Movements]
+    AL --> AM{Outside Boundary?}
+    AM -- Yes --> AN[Generate Alert]
+    AM -- No --> AL
 
-    I --> S[Display Analytics]
-    S --> T[Show Robot Metrics: Temperature, Speed, Height, Joint Movements, Torque]
+    I --> AO[Fetch Historical Data]
+    AO --> AP[Generate Reports]
+    AP --> AQ[Display Charts]
+    AQ --> AR[Export Reports]
 
-    J --> U[Display Alerts]
-    U --> V[Show Alert History]
-    V --> W[Allow Acknowledgment/Resolution of Alerts]
+    J --> AS[Robot Detects Issue]
+    AS --> AT[Generate Alert]
+    AT --> AU[Send Alert to Backend]
+    AU --> AV[Display Alert]
+    AV --> AW[User Acknowledges Alert]
+    AW --> AX[Mark as Resolved]
 
-    K --> X{Is User Admin?}
-    X -- Yes --> Y[Display Team Management]
-    Y --> Z[Add/Remove Users]
-    Y --> AA[Assign/Revoke Roles]
-    X -- No --> AB[Team Page Hidden]
+    K --> AY[Admin Goes to Team Page]
+    AY --> AZ[Fetch Users]
+    AZ --> BA[Display User Details]
+    BA --> BB[Add User]
+    BB --> BC[Assign Role]
+    BC --> BD[Log Action]
 
-    L --> AC[Display Settings]
-    AC --> AD[User Profile]
-    AC --> AE[Notification Preferences]
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#bbf,stroke:#333,stroke-width:2px
-    style G fill:#bbf,stroke:#333,stroke-width:2px
-    style H fill:#bbf,stroke:#333,stroke-width:2px
-    style I fill:#bbf,stroke:#333,stroke-width:2px
-    style J fill:#bbf,stroke:#333,stroke-width:2px
-    style K fill:#bbf,stroke:#333,stroke-width:2px
-    style L fill:#bbf,stroke:#333,stroke-width:2px
+    L --> BE[User Goes to Settings Page]
+    BE --> BF[Fetch Profile]
+    BF --> BG[Display Profile]
+    BG --> BH[Update Profile]
+    BH --> BI[Save Changes]
+    BE --> BJ[Fetch Notifications]
+    BJ --> BK[Display Notifications]
+    BK --> BL[Update Notifications]
+    BL --> BI

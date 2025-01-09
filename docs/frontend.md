@@ -14,14 +14,33 @@
 
 ## Key Components
 1. **Dashboard**:
-   - Cards for overview, critical alerts, active robots count, and average battery status.
+   - Real-time robot status (Active, Idle, Offline).
+   - Interactive map view showing robot locations.
+   - Key Performance Indicators (KPIs) for fleet health.
 2. **Robots Page**:
-   - List of robots with name, status, location, battery level, and video feed.
+   - List of robots with detailed information (name, status, location, battery level, CPU usage, RAM usage, video feed).
+   - Task assignment and monitoring capabilities.
+   - Command sending to robots.
 3. **Analytics Page**:
-   - Detailed charts and graphs for robot data.
+   - Historical data visualization for performance analysis.
+   - Reporting features for generating insights.
 4. **Alerts Page**:
-   - Table of alerts with acknowledgment/resolution buttons.
+   - Real-time alerts for critical issues.
+   - Customizable alert thresholds.
 5. **Team Page**:
    - Admin-only page for managing users and roles.
+   - Data sharing and insights collaboration.
 6. **Settings Page**:
-   - Forms for user profile and notification preferences.
+   - System configuration options for administrators.
+   - User preferences management.
+7. **Mission Planning Page**:
+   - Plan missions with varying levels of detail.
+   - Assign tasks to robots or allow intelligent task allocation.
+8. **Teleoperation Page**:
+   - Remote control features for operating robots.
+9. **Route Optimization Page**:
+   - Advanced algorithms for optimizing robot paths.
+10. **Geofencing Page**:
+    - Set virtual boundaries for robots.
+11. **Simulation Environment**:
+    - Test workflows without deploying actual robots.

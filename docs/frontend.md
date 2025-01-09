@@ -13,34 +13,86 @@
   - Icons: Dashboard, Robots, Analytics, Alerts, Team (admin-only), Settings, Logo.
 
 ## Key Components
-1. **Dashboard**:
-   - Real-time robot status (Active, Idle, Offline).
-   - Interactive map view showing robot locations.
-   - Key Performance Indicators (KPIs) for fleet health.
-2. **Robots Page**:
-   - List of robots with detailed information (name, status, location, battery level, CPU usage, RAM usage, video feed).
-   - Task assignment and monitoring capabilities.
-   - Command sending to robots.
-3. **Analytics Page**:
-   - Historical data visualization for performance analysis.
-   - Reporting features for generating insights.
-4. **Alerts Page**:
-   - Real-time alerts for critical issues.
-   - Customizable alert thresholds.
-5. **Team Page**:
-   - Admin-only page for managing users and roles.
-   - Data sharing and insights collaboration.
-6. **Settings Page**:
-   - System configuration options for administrators.
-   - User preferences management.
-7. **Mission Planning Page**:
-   - Plan missions with varying levels of detail.
-   - Assign tasks to robots or allow intelligent task allocation.
-8. **Teleoperation Page**:
-   - Remote control features for operating robots.
-9. **Route Optimization Page**:
-   - Advanced algorithms for optimizing robot paths.
-10. **Geofencing Page**:
+
+### **1. Dashboard**
+- **Purpose**: Centralized view of fleet health and robot status.
+- **Features**:
+  - Real-time robot status (Active, Idle, Offline).
+  - Interactive map showing robot locations.
+  - Key Performance Indicators (KPIs) for fleet health (battery levels, CPU usage, RAM usage).
+
+### **2. Robots Page**
+- **Purpose**: Manage and monitor individual robots.
+- **Features**:
+  - **Robot Details**:
+    - Display robot information (name, status, location, battery level, CPU usage, RAM usage).
+    - Live video feed integration using WebRTC.
+  - **Task Management**:
+    - Assign tasks to robots.
+    - Send commands to robots (e.g., start, stop, move).
+  - **Mission Planning**:
+    - Plan missions with varying levels of detail.
+    - Assign tasks to robots or allow intelligent task allocation.
+    - Monitor mission progress and completion.
+  - **Teleoperation**:
+    - Remote control features for operating robots.
+    - Send movement commands (e.g., forward, backward, turn).
+    - Receive real-time feedback (e.g., video feed, sensor data).
+  - **Route Optimization**:
+    - Advanced algorithms to optimize robot paths.
+    - Minimize travel time and energy consumption.
+  - **Geofencing**:
     - Set virtual boundaries for robots.
-11. **Simulation Environment**:
-    - Test workflows without deploying actual robots.
+    - Monitor robot movements and generate alerts if boundaries are violated.
+
+### **3. Analytics Page**
+- **Purpose**: Analyze historical data and generate insights.
+- **Features**:
+  - Historical data visualization (e.g., battery usage trends, task completion rates).
+  - Reporting features for generating insights.
+  - Export reports as PDF or CSV.
+
+### **4. Alerts Page**
+- **Purpose**: Monitor and resolve real-time alerts.
+- **Features**:
+  - Display real-time alerts (e.g., low battery, robot offline, high temperature).
+  - Acknowledge and resolve alerts.
+  - Customizable alert thresholds based on user preferences.
+
+### **5. Team Page**
+- **Purpose**: Manage users and roles (admin-only).
+- **Features**:
+  - Add/remove users.
+  - Assign/revoke roles (Admin, Manager, Operator).
+  - Log admin actions for audit purposes.
+
+### **6. Settings Page**
+- **Purpose**: Configure system and user settings.
+- **Features**:
+  - Update user profile (e.g., name, email, password).
+  - Configure notification preferences.
+  - Set system-wide configurations (admin-only).
+
+## State Management
+- **Global State**:
+  - Zustand for managing user roles, robot data, and alerts.
+- **Local State**:
+  - React Context API for component-specific state (e.g., form inputs, selected robot).
+
+## Styling
+- **Approach**:
+  - TailwindCSS for responsive, minimalist, and modern design.
+  - Dark mode support for better user experience.
+- **Components**:
+  - Pre-built Material-UI components for consistency and speed.
+
+## Real-Time Updates
+- **WebSockets**:
+  - Real-time updates for robot status, alerts, and video feeds.
+- **WebRTC**:
+  - Live video streaming from robots.
+
+## Responsiveness
+- **Mobile-Friendly**:
+  - Fully responsive design for desktop and mobile devices.
+  - Optimized navigation and interactions for touch devices.

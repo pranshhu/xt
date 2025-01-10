@@ -10,6 +10,6 @@ This is a web application for managing and monitoring robots/fleets with role-ba
 - [Third-Party Libraries Documentation](docs/third-party-libraries.md)
 
 ## Technology Stack
-- **Frontend**: React.js, Next.js, TailwindCSS, Zustand, Socket.IO, Material-UI.
+- **Frontend**: React.js, Next.js, TailwindCSS, Zustand, Socket.IO, Shadcn-UI.
 - **Backend**: Node.js, Express.js, PostgreSQL, JWT, WebRTC.
 - **Infrastructure**: AWS S3, AWS Elastic Beanstalk, GitHub Actions, Datadog/Grafana.

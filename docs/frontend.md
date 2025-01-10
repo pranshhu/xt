@@ -5,7 +5,7 @@
 - **Styling**: TailwindCSS for responsive, minimalist, and modern design.
 - **State Management**: Zustand for lightweight global state management.
 - **Real-Time Communication**: WebSockets (Socket.IO) for live updates.
-- **UI Library**: Material-UI for pre-built components with dark mode support.
+- **UI Library**: Shadcn-UI for pre-built components with dark mode support.
 
 ## Navigation
 - **Structure**:
@@ -84,7 +84,7 @@
   - TailwindCSS for responsive, minimalist, and modern design.
   - Dark mode support for better user experience.
 - **Components**:
-  - Pre-built Material-UI components for consistency and speed.
+  - Pre-built Shadcn-UI components for consistency and speed.
 
 ## Real-Time Updates
 - **WebSockets**:

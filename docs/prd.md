@@ -77,7 +77,7 @@
 - Capabilities for remote firmware updates of robots.
 
 ### **User Training Resources**
-- Access to training materials, tutorials, or webinars within the application.
+- Access to training Shadcns, tutorials, or webinars within the application.
 
 ### **Advanced Security Features**
 - Enhanced cybersecurity measures such as single sign-on, audit logging, and improved user permission systems.

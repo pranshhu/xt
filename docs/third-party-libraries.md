@@ -6,7 +6,7 @@
 3. **TailwindCSS**: For responsive, minimalist styling.
 4. **Zustand**: Lightweight state management library.
 5. **Socket.IO**: For real-time communication via WebSockets.
-6. **Material-UI**: For pre-built UI components with dark mode support.
+6. **Shadcn-UI**: For pre-built UI components with dark mode support.
 
 ## Backend Libraries
 1. **Express.js**: Backend framework for building APIs.

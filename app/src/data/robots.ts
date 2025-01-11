@@ -1,0 +1,26 @@
+export const robots = [
+    {
+      id: '1',
+      name: 'Robot1',
+      status: 'Active',
+      location: { longitude: -122.33, latitude: 47.61 },
+      battery_level: 80,
+      cpu_usage: 30,
+      ram_usage: 40,
+      temperature: 25,
+      speed: 10,
+      height: 2,
+    },
+    {
+      id: '2',
+      name: 'Robot2',
+      status: 'Idle',
+      location: { longitude: -122.34, latitude: 47.62 },
+      battery_level: 60,
+      cpu_usage: 20,
+      ram_usage: 30,
+      temperature: 22,
+      speed: 5,
+      height: 1,
+    },
+  ];
